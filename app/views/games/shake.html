@@ -1,0 +1,47 @@
+{{ template "layout.html"}}
+
+{{ define "content"}}
+    <script>
+       function sendStartShake() {
+            let params = {
+                id: $("input[name='coursePick']:checked").val()
+            };
+            $.post("/api/shake/start/", params).done(function (json){
+                $("#result").html(json.result);
+            }, 'json')
+       }
+
+       var myShakeEvent = new Shake();
+       myShakeEvent.start();
+       window.addEventListener('shake', shakeEventDidOccur, false);
+       function shakeEventDidOccur () {
+            let params = {
+                id: $("input[name='coursePick']:checked").val()
+            };
+            $.post("/api/shake/run/", params).done(function (json){
+                let result = (parseInt(json.result.elapsed) / 1000000000).toFixed(2).toString();
+                result += "s";
+                if (json.result.is_running === false) {
+                    result += "<br>Done"
+                }
+                $("#result").html(result);
+            }, 'json')
+       }
+
+    </script>
+
+    <div align="center">
+        <h1>Shake</h1>
+        <div id="result"></div>
+    </div>
+
+    <fieldset data-role="controlgroup">
+        {{ range $ID, $Course := .Courses}}
+        <input type="radio" name="coursePick" id="radio-choise-v-{{$ID}}a" value="{{ $ID}}" {{if (eq $ID 1)}}checked{{end}}>
+        <label for="radio-choise-v-{{$ID}}a">{{ $Course.Name }}</label>
+        {{ end }}
+    </fieldset>
+
+    <a href="#" data-role="button" onclick="sendStartShake(); return false;">Start</a>
+
+{{ end }}

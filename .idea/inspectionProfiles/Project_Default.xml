@@ -1,0 +1,40 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="GoUnhandledErrorResult" enabled="true" level="WARNING" enabled_by_default="true">
+      <methods>
+        <method importPath="hash" receiver="Hash" name="Write" />
+        <method importPath="strings" receiver="*Builder" name="Write" />
+        <method importPath="strings" receiver="*Builder" name="WriteByte" />
+        <method importPath="bytes" receiver="*Buffer" name="WriteRune" />
+        <method importPath="bytes" receiver="*Buffer" name="Write" />
+        <method importPath="bytes" receiver="*Buffer" name="WriteString" />
+        <method importPath="strings" receiver="*Builder" name="WriteString" />
+        <method importPath="bytes" receiver="*Buffer" name="WriteByte" />
+        <method importPath="strings" receiver="*Builder" name="WriteRune" />
+        <method importPath="math/rand" receiver="*Rand" name="Read" />
+        <method importPath="gobot.io/x/gobot" receiver="*Robot" name="Start" />
+        <method importPath="gobot.io/x/gobot/platforms/dji/tello" receiver="Driver" name="On" />
+        <method importPath="gobot.io/x/gobot/platforms/dji/tello" receiver="*Driver" name="SetExposure" />
+        <method importPath="gobot.io/x/gobot/platforms/dji/tello" receiver="*Driver" name="StartVideo" />
+        <method importPath="gobot.io/x/gobot/platforms/dji/tello" receiver="*Driver" name="SetVideoEncoderRate" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="Forward" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="Right" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="Backward" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="Left" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="Down" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="Up" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="TakeOff" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="Land" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="Clockwise" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="CounterClockwise" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="FrontFlip" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="LeftFlip" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="RightFlip" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="BackFlip" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="ThrowTakeOff" />
+        <method importPath="gotello/app/models" receiver="*DroneManager" name="Bounce" />
+      </methods>
+    </inspection_tool>
+  </profile>
+</component>
